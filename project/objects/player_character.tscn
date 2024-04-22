@@ -1,0 +1,62 @@
+[gd_scene load_steps=9 format=3 uid="uid://oe8fiqw1e4da"]
+
+[ext_resource type="Script" path="res://project/objects/player_character.gd" id="1_da2iw"]
+[ext_resource type="Texture2D" uid="uid://cvo88m6tv7xto" path="res://assets/space_frog-Sheet.png" id="2_wiupd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_22hje"]
+radius = 123.004
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkuob"]
+atlas = ExtResource("2_wiupd")
+region = Rect2(0, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l40o"]
+atlas = ExtResource("2_wiupd")
+region = Rect2(384, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gradp"]
+atlas = ExtResource("2_wiupd")
+region = Rect2(768, 0, 384, 384)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejtbc"]
+atlas = ExtResource("2_wiupd")
+region = Rect2(384, 0, 384, 384)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gfbaj"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkuob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l40o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gradp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejtbc")
+}],
+"loop": true,
+"name": &"wobble",
+"speed": 6.0
+}]
+
+[node name="player_character" type="RigidBody2D"]
+mass = 200.0
+gravity_scale = 0.0
+linear_velocity = Vector2(-1500, 500)
+script = ExtResource("1_da2iw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_22hje")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_gfbaj")
+animation = &"wobble"
+frame_progress = 0.477637

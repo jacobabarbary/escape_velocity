@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctmqe5vhfqfk3"]
+
+[ext_resource type="Script" path="res://project/objects/frog_launcher/frog_launcher_power.gd" id="1_pdfe5"]
+
+[node name="frog_launcher_power" type="Node2D"]
+script = ExtResource("1_pdfe5")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_right = 242.0
+offset_bottom = 16.0
+max_value = 10000.0
+
+[connection signal="drag_ended" from="HSlider" to="." method="_on_h_slider_drag_ended"]

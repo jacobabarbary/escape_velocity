@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b363d3t68xtgg"]
+
+[ext_resource type="Script" path="res://project/objects/frog_launcher_rotation.gd" id="1_yhpdr"]
+[ext_resource type="Texture2D" uid="uid://u3b50dip784d" path="res://assets/dir_arrow_sheet_right.png" id="2_20cmi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u7wa"]
+atlas = ExtResource("2_20cmi")
+region = Rect2(0, 0, 128, 128)
+
+[node name="frog_launcher_rotation" type="Node2D"]
+script = ExtResource("1_yhpdr")
+
+[node name="slider" type="Node2D" parent="."]
+position = Vector2(512, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="slider"]
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_1u7wa")

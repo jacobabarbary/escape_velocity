@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://boebnflexofja"]
+
+[ext_resource type="PackedScene" uid="uid://bw4tulc7wwfey" path="res://project/objects/planet.tscn" id="1_s8a7x"]
+[ext_resource type="PackedScene" uid="uid://bm2pcsfstbeax" path="res://project/objects/goal.tscn" id="2_tvfa3"]
+
+[node name="planet" instance=ExtResource("1_s8a7x")]
+
+[node name="goal" parent="." index="1" instance=ExtResource("2_tvfa3")]

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bw4tulc7wwfey"]
+
+[ext_resource type="Script" path="res://project/objects/planet.gd" id="1_pures"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hnccw"]
+radius = 226.374
+
+[node name="planet" type="CharacterBody2D" groups=["planets"]]
+script = ExtResource("1_pures")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hnccw")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://c06fakcjq4rht"]
+
+[sub_resource type="Theme" id="Theme_84cvi"]
+default_font_size = 80
+
+[node name="launch_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -141.0
+offset_top = -158.0
+offset_right = 141.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_84cvi")
+text = "Submit"
